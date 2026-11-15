@@ -1,0 +1,15 @@
+{
+  "checkedAt": "2026-11-15T13:37:11.905Z",
+  "lessons": 77,
+  "groups": {
+    "style": 15,
+    "text": 20,
+    "motion": 42
+  },
+  "interfaceStrings": 146,
+  "mediaMiB": 102.48,
+  "precacheFiles": 93,
+  "rangeCases": 7,
+  "result": "PASS",
+  "scope": "Static integrity, bilingual strings and service-worker byte ranges. No physical-device acceptance."
+}

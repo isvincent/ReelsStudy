@@ -1,0 +1,56 @@
+{
+  "result": "PASS",
+  "checks": [
+    "All existing DOM IDs, links, translated content keys and app logic preserved",
+    "Category filtering and load more",
+    "Search and empty-state reset",
+    "Favorites and favorites filter",
+    "Two-video comparison",
+    "Lesson dialog, video playback, progress and quiz",
+    "Prompt generation, lesson transfer and TXT download",
+    "Practice challenge transfer and checklist",
+    "Chinese and English switching",
+    "All three views fit 375, 390, 800, 1280, 1440 and 1920 pixel widths",
+    "Dark theme, large text, phone presentation and landscape card layout",
+    "No browser JavaScript errors"
+  ],
+  "preservation": [
+    {
+      "attr": "id",
+      "missing": []
+    },
+    {
+      "attr": "href",
+      "missing": []
+    },
+    {
+      "attr": "data-view",
+      "missing": []
+    },
+    {
+      "attr": "data-lesson",
+      "missing": []
+    },
+    {
+      "attr": "data-i18n",
+      "missing": []
+    },
+    {
+      "attr": "data-i18n-html",
+      "missing": []
+    },
+    {
+      "attr": "data-i18n-placeholder",
+      "missing": []
+    },
+    {
+      "attr": "data-i18n-aria",
+      "missing": []
+    },
+    {
+      "attr": "data-i18n-alt",
+      "missing": []
+    }
+  ],
+  "errors": []
+}
