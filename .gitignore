@@ -5,8 +5,3 @@ Thumbs.db
 .env
 *.zip
 QA/
-
-.claude/
-_美化前備份/
-_功能擴充前備份/
-_分鏡工具前備份/

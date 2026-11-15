@@ -1,6 +1,6 @@
 'use strict';
 importScripts('./precache.js');
-const SHELL='reel-shell-v4',MEDIA='reel-media-v1';
+const SHELL='reel-shell-v2-visual',MEDIA='reel-media-v1';
 self.addEventListener('install',event=>event.waitUntil(caches.open(SHELL).then(c=>c.addAll(self.REEL_PRECACHE))));
 self.addEventListener('activate',event=>event.waitUntil((async()=>{for(const key of await caches.keys())if(key.startsWith('reel-shell-')&&key!==SHELL)await caches.delete(key);await self.clients.claim();})()));
 async function ranged(response,range){const bytes=await response.arrayBuffer(),size=bytes.byteLength;const match=/^bytes=(\d*)-(\d*)$/.exec(range);if(!match||(!match[1]&&!match[2]))return new Response(null,{status:416,headers:{'Content-Range':`bytes */${size}`}});let start=match[1]?Number(match[1]):Math.max(0,size-Number(match[2]));let end=match[1]?(match[2]?Math.min(Number(match[2]),size-1):size-1):size-1;if(start>=size||end<start||!Number.isSafeInteger(start)||!Number.isSafeInteger(end))return new Response(null,{status:416,headers:{'Content-Range':`bytes */${size}`}});return new Response(bytes.slice(start,end+1),{status:206,headers:{'Content-Type':response.headers.get('Content-Type')||'video/mp4','Content-Length':String(end-start+1),'Content-Range':`bytes ${start}-${end}/${size}`,'Accept-Ranges':'bytes'}});}

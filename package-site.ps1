@@ -3,7 +3,7 @@ Add-Type -AssemblyName System.IO.Compression
 Add-Type -AssemblyName System.IO.Compression.FileSystem
 $projectRoot = (Resolve-Path -LiteralPath $PSScriptRoot).Path
 $zipPath = Join-Path (Split-Path -Parent $projectRoot) 'Reel影片製作_GitHub完整包.zip'
-$rootNames = @('index.html','styles.css','app.js','i18n.js','manifest.webmanifest','sw.js','precache.js','.nojekyll','.gitignore','README.md','help.html','DESIGN.md','server.mjs','啟動學習網.cmd')
+$rootNames = @('index.html','styles.css','tokens.css','base.css','app.js','i18n.js','manifest.webmanifest','sw.js','precache.js','.nojekyll','.gitignore','README.md','DESIGN.md','server.mjs','啟動學習網.cmd')
 $files = @($rootNames | ForEach-Object { Get-Item -LiteralPath (Join-Path $projectRoot $_) })
 $files += Get-Item -LiteralPath (Join-Path $projectRoot 'data/catalog.js')
 $files += Get-ChildItem -LiteralPath (Join-Path $projectRoot 'assets/videos') -File -Filter '*.mp4'
